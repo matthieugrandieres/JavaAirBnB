@@ -1,19 +1,26 @@
 package matthieu.airbnb.outils;
-    
+
 import java.util.Date;
 
 public class MaDate extends Date {
 
-    private Date date;
+    private int year;
+    private int month;
+    private int day;
 
-    public MaDate(Date pDate){
-        date = pDate;
+    public MaDate(int year, int month, int date){
+        super(year, month, date);
+        this.year = year;
+        this.month = month;
+        this.day = date;
     }
+
+
 
     @Override
     public String toString() {
         return "MaDate{" +
-                "date=" + date +
+                "date=" + year + "/" + month + "/" + day +
                 '}';
     }
 }
