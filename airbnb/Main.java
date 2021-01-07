@@ -37,13 +37,13 @@ public class Main {
         Sejour sejour1 = new Sejour(formatter.format(date), 3, logement1, 4);
 
         // 5 - Réservation
-        Reservation reservation1 = new Reservation(1, sejour1, voyageur1, true, formatter.format(date));
-
+        Reservation reservation1 = new Reservation(1, sejour1, voyageur1, hote1,true, formatter.format(date));
+        reservation1.afficher();
 
         // 6 - Appartement
         Appartement appt1 = new Appartement(hote1, 6, "6 av du gen de gaulle, 37230 Fondettes",
                 56, 5, 0, 0);
-        appt1.afficher();
+        //appt1.afficher();
 
         // 7 - Date
         Date madate1 = Untile.stringToDate("12/02/1997");
@@ -52,9 +52,9 @@ public class Main {
         System.out.println(madate2);
 
         // 8 - Date héritage
-        MaDate madate3 = new MaDate(madate1);
+        //MaDate madate3 = new MaDate();
         System.out.println();
-        System.out.println(madate3.toString());
+        //System.out.println(madate3);
 
     }
 }
